@@ -59,11 +59,10 @@ TARGET_KMODULES := true
 COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
-# Kernel
+# Kernel 
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive selinux=0
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --base 0x40078000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100 --board v.s.160107
 TARGET_PREBUILT_KERNEL := device/Micromax/A102/kernel
 BOARD_CUSTOM_BOOTIMG_MK := device/Micromax/A102/MTKbootimg.mk
 BOARD_CUSTOM_BOOTIMG := true
@@ -120,5 +119,4 @@ POLICYVERS := 26
 # Hack for build
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/virtual/android_usb/android0/f_mass_storage/lun%d/file"
 
