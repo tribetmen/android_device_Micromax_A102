@@ -82,9 +82,21 @@ BOARD_EGL_CFG := device/Micromax/A102/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
+# Healthd & Charging
+HEALTHD_ENABLE_TRICOLOR_LED := true
+RED_LED_PATH := /sys/class/leds/red/brightness
+GREEN_LED_PATH := /sys/class/leds/green/brightness
+BLUE_LED_PATH := /sys/class/leds/blue/brightness
+# Next lines, fix charging-mod on power off. It needs to modify the init.cpp, too.
+BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/BOOT/BOOT/boot/boot_mode
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_SHOW_PERCENTAGE := true
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.mtk
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/Micromax/A102/charger/images
+
 # Selinux
-#BOARD_SEPOLICY_DIRS := \
-       device/Micromax/A102/sepolicy
+BOARD_SEPOLICY_DIRS += device/Micromax/A102/sepolicy
 
 #BOARD_SEPOLICY_UNION := \
        device.te \
