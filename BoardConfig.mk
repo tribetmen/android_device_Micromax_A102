@@ -96,7 +96,8 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.mtk
 BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/Micromax/A102/charger/images
 
 # Selinux
-BOARD_SEPOLICY_DIRS += device/Micromax/A102/sepolicy
+BOARD_SEPOLICY_DIRS := \
+       device/Micromax/A102/sepolicy
 
 #BOARD_SEPOLICY_UNION := \
        device.te \
