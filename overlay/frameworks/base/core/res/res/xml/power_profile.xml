@@ -28,7 +28,7 @@
         <value>93</value>
         <value>75</value>
     </array>
-    <item name="battery.capacity">450</item>
+    <item name="battery.capacity">2500</item>
     <array name="wifi.batchedscan">
         <value>.0002</value>
         <value>.002</value>
