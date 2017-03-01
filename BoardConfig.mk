@@ -21,6 +21,9 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 WITH_DEXPREOPT := true
 DONT_DEXPREOPT_PREBUILTS := true
 
+# Offline charging
+BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/BOOT/BOOT/boot/boot_mode
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := mt6572
 
