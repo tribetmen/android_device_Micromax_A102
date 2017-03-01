@@ -67,6 +67,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/spn-conf.xml:system/etc/spn-conf.xml
 
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
+    
 # GPS
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
