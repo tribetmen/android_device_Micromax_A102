@@ -1,4 +1,4 @@
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # The gps config appropriate for this device
 # $(call inherit-product, device/common/gps/gps_us_supl.mk)
@@ -131,8 +131,6 @@ PRODUCT_PROPERTY_OVERRIDES := \
 # Set default player to AwesomePlayer
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.media.use-awesome=true
-
-$(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_NAME := full_A102
 PRODUCT_DEVICE := A102
