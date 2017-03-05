@@ -139,4 +139,8 @@ PRODUCT_DEVICE := A102
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := hdpi
+
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
